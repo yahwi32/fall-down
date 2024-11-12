@@ -58,7 +58,7 @@ while True:
                         files = {'image': (frame_filename, f, 'image/jpeg')}
                         # Add the ref and value fields to the data
     
-                        response = requests.post('http://localhost:3000/realtime/write/fall_down', files=files)
+                        response = requests.post('https://iot-fall-be.vercel.app/realtime/write/fall_down', files=files)
 
                     if response.status_code == 200:
                         print("Frame uploaded successfully:", response.json())
